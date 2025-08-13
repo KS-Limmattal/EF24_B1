@@ -78,3 +78,36 @@ Aufgabe:
    - Schreibe eine Methode `getNextGeneration()`, das eine zweidimensionale `boolean`-Matrix cells entgegennimmt und aus der übergebenen Matrix die Matrix der nächsten Generation berechnet und zurückgibt.
    - Schreibe eine Methode `printCells()`, das eine zweidimensionale `boolean`-Matrix `cells` entgegennimmt und auf der Konsole darstellt. Dabei sollen lebende Zellen mit `@` dargestellt werden und tote entweder mit Leerschlag oder mit einem Punkt.
    - Die `main`-Methode soll Zahlen `m`, `n` und `numberOfGenerations` definieren (wähle selbst sinnvolle Werte), eine `m*n`-Generation erzeugen und sie auf der Konsole ausgeben. Danach soll sie `numberOfGenerations` Generationen berechnen und ebenfalls ausgeben. Zwischen den Generationen kann mit `TimeUnit.SECONDS.sleep(1);` eine Pause gemacht werden.
+
+## Rekursion
+
+### Ressourcen
+
+- `Recursion.java`
+- [W3Schools](https://www.w3schools.com/java): Seite "Java Recursion".
+
+### Aufgabenstellungen
+Für die folgenden Probleme gäbe es grundsätzlich auch iterative (d.h. schleifenbasierte) Lösungen. Sie sollen aber allesamt mit Rekursion gelöst werden - wenn möglich ohne Hilfsmethoden. 
+Falls nichts Anderes erwähnt, soll das Resultat zurückgegeben werden.
+ 
+h) Euklidischer Algorithmus: Damit kann von zwei natürlichen Zahlen x und y der ggT berechnet werden:
+   ggT(24, 81):
+   81 / 24 -> Rest 9
+   24 / 9  -> Rest 6
+   9 / 6   -> Rest 3 <= ggT
+   6 / 3   -> Rest 0
+   => der letzte Rest ungleich 0 ist der ggT
+   Programmiere eine rekursive Methode `gcd()` (greatest common divisor), die diesem Algorithmus folgt.
+   Achtung: Wie viel Code brauchst du wirklich für die Fallunterscheidung, welches das grössere Argument ist?
+ 
+i) Spiegeln einer Zeichenfolge: Schreibe ein Programm `verlan()`, das eine Zeichenfolge invertiert.
+   Tipps: 
+   - Für einen String `s` kann mit `char c = s.charAt(n)` das Zeichen an der `n`-ten Stelle ausgelesen werden. Zeichen vom Typ `char` können danach ganz normal mit Hilfe von `+` mit `Strings` verbunden werden.
+   - Benutze `.substring()`
+   - Es soll kein Array gebraucht werden.
+ 
+j) Türme von Hanoi: Mache dich mit dem Problem vertraut und entwickle eine Methode `move(height, fromPeg, toPeg, otherPeg)`, die Schritt für Schritt ausgibt, welche Scheibe von welchem Stab auf welchen verschoben wird.
+ 
+   Zusatzaufgabe: Stelle jeden Schritt graphisch auf der Konsole dar.
+ 
+*k) Implementiere ein Sortierverfahren deiner Wahl rekursiv. Für welche Verfahren ist das überhaupt sinnvoll möglich?

@@ -46,5 +46,15 @@ public class ArrayTests {
     public static void main(String[] args) {
         // syntax();
         // memory();
+        double[] a = { 0.5, 2.71828, 1/10, 2.75};
+        double[] b = { 0.5, 2.71828, 1/10, 2.75};
+        double[][] c = {a, b};
+        double[][] d = c.clone();
+        // d[0][0] = 2;
+        d[0] = new double[] {0, 0};
+        System.out.println(Arrays.toString(c));
+        System.out.println(Arrays.toString(d));
+        System.out.println(c[0][0]);
     }
 }
+ 
